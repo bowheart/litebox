@@ -98,4 +98,3 @@
 	};
 	
 }).call(window, jQuery);
- 
