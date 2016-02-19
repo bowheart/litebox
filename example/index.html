@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title>LiteBox Example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="index.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 	<script src="../src/jquery.litebox.js"></script>
 	<script>
@@ -10,6 +13,19 @@
 	</script>
 </head>
 <body>
-	<a class="litebox-trigger" href="litebox-content.html">Click Me!</a>
+	<div><a class="litebox-trigger" href="litebox-content.html">Click Me!</a></div>
+	<div><a class="litebox-trigger" href="litebox-content.html" data-size="sm">Small LiteBox</a></div>
+	<div><a class="litebox-trigger" href="litebox-content.html" data-size="lg">Large LiteBox</a></div>
+	<div><a class="litebox-trigger" href="litebox-content.html" data-class="customize-me">Customized LiteBox</a></div>
+	<div><a class="litebox-trigger" href="#" data-template="#litebox-content">Grab the contents on this page</a></div>
+	
+	<div><button class="litebox-trigger" href="litebox-content.html">Buttons work, too!</button></div>
+	
+	<script type="text/template" id="litebox-content">
+		<h3>Hello!</h3>
+		<p>I'm a lightbox that was generated from content inside a</p>
+			<code>&lt;script type="text/template"&gt;&lt;/script&gt;</code>
+		<p>tag on this same page</p>
+	</script>
 </body>
 </html>

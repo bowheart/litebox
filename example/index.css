@@ -1,0 +1,12 @@
+body {
+	line-height: 1.7;
+}
+
+.customize-me {
+	background: #444;
+	color: #fff;
+	font-family: arial;
+	font-size: 18px;
+	height: 600px;
+	width: 200px;
+}
