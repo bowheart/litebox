@@ -1,6 +1,6 @@
 # LiteBox
 #### v0.2.0
-LiteBox is a lightweight, jQuery-dependent lightbox library
+LiteBox is a lightweight, jQuery-dependent lightbox library.
 LiteBox is designed to be super easy to use.  It integrates with jQuery and automates everything for you.
 
 ## Coolness Factors:
