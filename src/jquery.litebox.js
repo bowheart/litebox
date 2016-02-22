@@ -34,12 +34,12 @@
 			self.el.one('click', function(event) {
 				event.preventDefault();
 				self.hide();
-			}).one('click', '.litebox-x, .close', function(event) {
-				event.preventDefault();
-				self.hide();
 			});
 			self.el.find('.litebox-front').off('click').click(function(event) {
 				event.stopPropagation();
+			}).one('click', '.litebox-x, .close', function(event) {
+				event.preventDefault();
+				self.hide();
 			});
 		},
 		bindOpen: function() {
