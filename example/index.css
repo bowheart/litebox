@@ -10,3 +10,9 @@ body {
 	height: 600px;
 	width: 200px;
 }
+.customize-me:before {
+	background: linear-gradient(#444, rgba(0,0,0,0));
+}
+.customize-me:after {
+	background: linear-gradient(rgba(0,0,0,0), #444);
+}

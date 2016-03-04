@@ -1,0 +1,19 @@
+{
+  "name": "litebox",
+  "version": "0.2.0",
+  "description": "A lightweight, jQuery-dependent lightbox library",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bowheart/litebox.git"
+  },
+  "keywords": [
+    "jQuery",
+    "lightbox"
+  ],
+  "author": "Joshua Claunch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bowheart/litebox/issues"
+  },
+  "homepage": "https://github.com/bowheart/litebox#readme"
+}
