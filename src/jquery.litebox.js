@@ -1,5 +1,5 @@
 /**
- * LiteBox -- version 0.2.0 -- Jan. 22, 2016
+ * LiteBox -- version 0.4.0 -- Jan. 22, 2016
  *
  * Another library by Joshua Claunch
  *   https://github.com/bowheart
@@ -37,7 +37,7 @@
 			});
 			self.el.find('.litebox-front').off('click').click(function(event) {
 				event.stopPropagation();
-			}).one('click', '.litebox-x, .close', function(event) {
+			}).one('click touchstart touchmove touchend', '.litebox-x, .litebox-close', function(event) {
 				event.preventDefault();
 				self.hide();
 			});
@@ -73,7 +73,7 @@
 		
 		
 		get html() {
-			return '<div class="litebox"><div class="litebox-front litebox-' + this.size + this.class + '"><span class="litebox-x">&times;</span><div class="litebox-content"><p>Error: The content could not be loaded.</p></div></div></div>';
+			return '<div class="litebox"><div class="litebox-front litebox-' + this.size + this.class + '"><a class="litebox-x">&times;</a><div class="litebox-content"><p>Error: The content could not be loaded.</p></div></div></div>';
 		}
 	};
 	
@@ -89,9 +89,10 @@
             + '.litebox-front:before, .litebox-front:after { content: ""; height: 40px; position: absolute; left: 0; right: 16px; }'
             + '.litebox-front:before { background: linear-gradient(#fff 15%, rgba(255,255,255,0.1)); top: 0; }'
             + '.litebox-front:after { background: linear-gradient(rgba(255,255,255,0.1), #fff 85%); bottom: 0; }'
-			+ '.litebox-x { color: rgba(0,0,0,0.7); cursor: pointer; font-family: arial; font-size: 32px; font-weight: bold; position: absolute; top: -7px; right: 20px; text-shadow: 0 0 rgba(255,255,255,0.5); z-index: 1; }'
+			+ '.litebox-x { color: rgba(0,0,0,0.7); cursor: pointer; font-family: arial; font-size: 40px; font-weight: bold; line-height: 21px; padding: 10px 4px 8px 8px; position: absolute; top: 0; right: 16px; text-shadow: 0 0 rgba(255,255,255,0.5); z-index: 1; }'
 			+ '.litebox-x:hover { color: rgba(0,0,0,1); }'
-            + '.litebox-content { box-sizing: border-box; overflow: auto; padding: 40px 20px; height: 100%; width: 100%; }'
+            + '.litebox-content { box-sizing: border-box; overflow: auto; padding: 40px 20px 0; height: 100%; width: 100%; }'
+			+ '.litebox-content:after { content: ""; display: block; height: 40px; }'
 			+ '.litebox:after { content: ""; display: inline-block; height: 100%; position: relative; vertical-align: middle; }'
 	var blob = new Blob([css], {type: 'text/css'});
 	$('head').prepend('<link rel="stylesheet" href="' + window.URL.createObjectURL(blob) + '">');
